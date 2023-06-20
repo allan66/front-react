@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 const Login = ({ }) => {
     const handleSubmit = (values) => {
-
+console.log('teste')
     };
 
     const validateLogin = yup.object().shape({
@@ -20,7 +20,7 @@ const Login = ({ }) => {
             .min(8, "A senha deve conter 8 caracteres")
             .required("Este campo é obrigatório")
     });
-
+ 
     return (
         <>
             <LoginContainer>
