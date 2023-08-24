@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form-field {
+    width: 100%;
+    min-width: 350px;
+    padding:'0 10px';
+    border: '1px solid $bbb';
+    border-radius:5px;
+    height: 40px;
+}
+
+.form-error {
+    width: 100%;
+    color: red;
+    padding:'0 10px';
+    border: '1px solid $bbb';
+    border-radius:5px;
+    height: 40px;
+}
+
+.table-striped {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.table-striped td, .table-striped th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-striped tr:nth-child(even){background-color: #f2f2f2;}
+
+.table-striped tr:hover {background-color: #ddd;}
+
+.table-striped th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+

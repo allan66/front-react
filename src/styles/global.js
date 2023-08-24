@@ -13,19 +13,8 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-coloer: #f2f2f2;
+    background-color: #f2f2f2;
 }
-`;
-
-export const FormContainer = styled.form`
-    display:flex;
-    align-items: flex-end;
-    gap:10px;
-    flex-wrap:wrap;
-    background-color:#fff;
-    padding: 20px;
-    box-shadow: 0px 0px 5px #ccc;
-    border-radius: 5px;
 `;
 
 export const InputArea = styled.div`
@@ -34,7 +23,7 @@ export const InputArea = styled.div`
 `;
 
 export const Input = styled.input`
-    width: 120px;
+    width: 300px;
     padding:0 10px;
     border: 1px solid $bbb;
     border-radius:5px;
@@ -51,20 +40,59 @@ export const Button = styled.button`
     height: 42px;
 `;
 
-export const Label = styled.label``;
+export const BackButton = styled.button`
+    padding:10px;
+    cursor:pointer;
+    border-radius: 5px;
+    margin:10px;
+    border: none;
+    background-color: #ccc;
+    color:black;
+    height: 42px;
+`;
 
-export const LoginContainer = styled.div`
+export const ButtonEdit = styled.button`
+    padding:5px;
+    cursor:pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #2c73d2;
+    color:white;
+    height: 42px;
+`;
+
+export const ButtonDelete = styled.button`
+    padding:5px;
+    cursor:pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    color:white;
+    height: 42px;
+    margin:10px;
+`;
+
+export const Container = styled.div`
     width: 100%;
-    max-width:800px;
     margin-top:20px;
     display:flex;
     flex-direction: column;
-    alaign-items:centar;
+    align-items:center;
     gap:10px;
     
 `;
 
-export const FormGroup = styled.div``;
+export const FormGroup = styled.div`
+    width: 100%;
+    border-radius:5px;
+    margin:5px;
+    align-items:center;
+    justify-content: center;
+`;    
+  
+export const Label = styled.label`
+  text-transform: capitalize;
+`;
 
 export const Title = styled.h2``;
 
