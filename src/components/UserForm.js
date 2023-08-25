@@ -39,7 +39,7 @@ const UserForm = () => {
     }
 
     if (user.id) {
-      updateUser(UserForm);
+      updateUser();
 
       return;
     }
@@ -50,7 +50,7 @@ const UserForm = () => {
       name: user.name,
     })
       .then((response) => {
-        if (response.data.status === 201) {
+        if (response.data.status === 201) { 
           MySwal.fire(`Usuário ${response.data.data.name} criado com sucesso!`);
           setTimeout(() => {
             window.location = "/list";
@@ -65,9 +65,9 @@ const UserForm = () => {
 
   const updateUser = (values) => {
     Axios.put(`${process.env.REACT_APP_URL_API}/user/${user.id}`, {
-      email: values.email,
-      age: values.age,
-      name: values.name,
+      email: user.email,
+      age: user.age,
+      name: user.name,
     })
       .then((response) => {
         if (response.data.status === 201) {
@@ -86,7 +86,6 @@ const UserForm = () => {
   };
 
   function handleChange(event) {
-    console.log(event);
     const field = event.target.name;
     const value = event.target.value;
 
@@ -131,8 +130,8 @@ const UserForm = () => {
               <Field
                 className="form-field"
                 value={user.email}
+                onChange={handleChange}
                 name="email"
-                required
                 type="email"
               />
             </FormGroup>

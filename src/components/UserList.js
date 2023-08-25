@@ -24,16 +24,15 @@ const UserList = () => {
     });
   };
 
-  const deleteUser = (id) => {
+  const deleteUser = (user) => {
     Swal.fire({
-      title: "Você tem certeza qu?",
+      title: `Você tem certeza que deseja excluir o usuário ${user.name} ?`,
       showDenyButton: true,
-      showCancelButton: true,
-      confirmButtonText: "Save",
-      denyButtonText: `Don't save`,
+      confirmButtonText: "Sim",
+      denyButtonText: `Cancelar`,
     }).then((result) => {
       if (result.isConfirmed) {
-        Axios.delete(`${process.env.REACT_APP_URL_API}/user/${id}`).then(
+        Axios.delete(`${process.env.REACT_APP_URL_API}/user/${user.id}`).then(
           (response) => {
             if (response.data.status === 200) {
               MySwal.fire(`Usuário excluido com sucesso`);
@@ -80,7 +79,7 @@ const UserList = () => {
                     </NavLink>
                     <ButtonDelete
                       type="button"
-                      onClick={() => deleteUser(user.id)}
+                      onClick={() => deleteUser(user)}
                     >
                       Excluir
                     </ButtonDelete>
